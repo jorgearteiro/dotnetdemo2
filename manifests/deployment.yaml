@@ -4,7 +4,7 @@ metadata:
   name: dotnetdemo2
   labels:
     app: dotnetdemo2
-  namespace: dotnetdemo2
+  namespace: namespace-workflow-1691234885026
 spec:
   replicas: 1
   selector:
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: dotnetdemo2
-          image: cdacn.azurecr.io/dotnetdemo2:v1
+          image: cdacn.azurecr.io/dotnetdemo2-1691234885026:latest
           ports:
             - containerPort: 80
