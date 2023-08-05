@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnetdemo2
+  labels:
+    app: dotnetdemo2
+  namespace: dotnetdemo2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dotnetdemo2
+  template:
+    metadata:
+      labels:
+        app: dotnetdemo2
+    spec:
+      containers:
+        - name: dotnetdemo2
+          image: cdacn.azurecr.io/dotnetdemo2:v1
+          ports:
+            - containerPort: 80
