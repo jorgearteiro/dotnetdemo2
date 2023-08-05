@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: dotnetdemo2
-  namespace: dotnetdemo2
+  namespace: namespace-workflow-1691234885026
 spec:
   type: LoadBalancer
   selector:
