@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test11
+  name: dotnet-course
   labels:
-    app: test11
-  namespace: namespace-workflow-1709358109156
+    app: dotnet-course
+  namespace: demo-aks-course
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: test11
+      app: dotnet-course
   template:
     metadata:
       labels:
-        app: test11
+        app: dotnet-course
     spec:
       containers:
-        - name: test11
-          image: cdacn.azurecr.io/dotnet111:latest
+        - name: dotnet-course
+          image: cdacn.azurecr.io/demo-1709362170553:latest
           ports:
             - containerPort: 5000
