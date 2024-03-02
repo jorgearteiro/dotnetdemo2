@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dotnetdemo2
+  name: test11
   labels:
-    app: dotnetdemo2
-  namespace: namespace-workflow-1691234885026
+    app: test11
+  namespace: namespace-workflow-1709358109156
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dotnetdemo2
+      app: test11
   template:
     metadata:
       labels:
-        app: dotnetdemo2
+        app: test11
     spec:
       containers:
-        - name: dotnetdemo2
-          image: cdacn.azurecr.io/dotnetdemo2-1691234885026:latest
+        - name: test11
+          image: cdacn.azurecr.io/dotnet111:latest
           ports:
-            - containerPort: 80
+            - containerPort: 5000
