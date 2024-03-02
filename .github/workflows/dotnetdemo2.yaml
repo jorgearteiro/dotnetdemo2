@@ -8,8 +8,8 @@ env:
     ACR_RESOURCE_GROUP: aks-demo
     AZURE_CONTAINER_REGISTRY: cdacn
     CLUSTER_NAME: aks-azure
-    CLUSTER_RESOURCE_GROUP: aks-azure
-    CONTAINER_NAME: dotnetdemo2-1691234885026
+    CLUSTER_RESOURCE_GROUP: aks-course
+    CONTAINER_NAME: dotnetdemo2
     DEPLOYMENT_MANIFEST_PATH: |
         manifests/deployment.yaml
         manifests/service.yaml
@@ -62,4 +62,4 @@ jobs:
                 action: deploy
                 images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
                 manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
-                namespace: namespace-workflow-1691234885026
+                namespace: dotnet2
