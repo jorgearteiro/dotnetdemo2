@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dotnetdemo2
-  namespace: namespace-workflow-1691234885026
+  name: test11
+  namespace: namespace-workflow-1709358109156
 spec:
   type: LoadBalancer
   selector:
-    app: dotnetdemo2
+    app: test11
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 5000
+      targetPort: 5000
